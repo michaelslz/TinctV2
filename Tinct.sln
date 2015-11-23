@@ -1,0 +1,118 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.Net.Communication", "Tinct.Net.Communication\Tinct.Net.Communication.csproj", "{BE64FE3D-47E6-407B-A443-3E23C3B91EFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.Net.SlavePointConsole", "Tinct.Net.SlavePointTest\Tinct.Net.SlavePointConsole.csproj", "{C97EAD81-893C-4DB5-9D8E-50D5D425D383}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.Net.MasterPointConsole", "Tinct.Net.MasterPoint\Tinct.Net.MasterPointConsole.csproj", "{6C41ABFB-E301-42FC-A90C-734121B16558}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.Net.Message", "Tinct.Net.Message\Tinct.Net.Message.csproj", "{8D89EA73-D087-4D18-B325-43E1F709704D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.PlatformController", "Tinct.PlatformInvoke\Tinct.PlatformController.csproj", "{BDD08F71-475C-4C29-80E9-C96DA7DBEFAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.TinctTaskMangement", "Tinct.MasterPointController\Tinct.TinctTaskMangement.csproj", "{771782BF-835B-4D6F-A163-99AB82A9C511}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{C02E3E4F-6F5C-4F92-A4FA-F14855FF269C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{0A095455-FC56-464E-B01F-E8DC50696802}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5A6458C4-B1FE-447A-B2F4-F94A302BA743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.Net.MessageDispath", "Tinct.Net.MessageDispath\Tinct.Net.MessageDispath.csproj", "{381008C6-E83C-4898-8F14-43985CBF49BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tinct.Common", "Tinct.Common\Tinct.Common.csproj", "{DFD232E0-BEF9-4ED0-8B57-651F9DD06A0F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE64FE3D-47E6-407B-A443-3E23C3B91EFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE64FE3D-47E6-407B-A443-3E23C3B91EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE64FE3D-47E6-407B-A443-3E23C3B91EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE64FE3D-47E6-407B-A443-3E23C3B91EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97EAD81-893C-4DB5-9D8E-50D5D425D383}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C97EAD81-893C-4DB5-9D8E-50D5D425D383}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C97EAD81-893C-4DB5-9D8E-50D5D425D383}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C97EAD81-893C-4DB5-9D8E-50D5D425D383}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C41ABFB-E301-42FC-A90C-734121B16558}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C41ABFB-E301-42FC-A90C-734121B16558}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C41ABFB-E301-42FC-A90C-734121B16558}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C41ABFB-E301-42FC-A90C-734121B16558}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D89EA73-D087-4D18-B325-43E1F709704D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D89EA73-D087-4D18-B325-43E1F709704D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D89EA73-D087-4D18-B325-43E1F709704D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D89EA73-D087-4D18-B325-43E1F709704D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDD08F71-475C-4C29-80E9-C96DA7DBEFAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDD08F71-475C-4C29-80E9-C96DA7DBEFAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDD08F71-475C-4C29-80E9-C96DA7DBEFAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDD08F71-475C-4C29-80E9-C96DA7DBEFAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771782BF-835B-4D6F-A163-99AB82A9C511}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771782BF-835B-4D6F-A163-99AB82A9C511}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771782BF-835B-4D6F-A163-99AB82A9C511}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771782BF-835B-4D6F-A163-99AB82A9C511}.Release|Any CPU.Build.0 = Release|Any CPU
+		{381008C6-E83C-4898-8F14-43985CBF49BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{381008C6-E83C-4898-8F14-43985CBF49BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{381008C6-E83C-4898-8F14-43985CBF49BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{381008C6-E83C-4898-8F14-43985CBF49BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFD232E0-BEF9-4ED0-8B57-651F9DD06A0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFD232E0-BEF9-4ED0-8B57-651F9DD06A0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFD232E0-BEF9-4ED0-8B57-651F9DD06A0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFD232E0-BEF9-4ED0-8B57-651F9DD06A0F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE64FE3D-47E6-407B-A443-3E23C3B91EFB} = {C02E3E4F-6F5C-4F92-A4FA-F14855FF269C}
+		{C97EAD81-893C-4DB5-9D8E-50D5D425D383} = {0A095455-FC56-464E-B01F-E8DC50696802}
+		{6C41ABFB-E301-42FC-A90C-734121B16558} = {0A095455-FC56-464E-B01F-E8DC50696802}
+		{8D89EA73-D087-4D18-B325-43E1F709704D} = {C02E3E4F-6F5C-4F92-A4FA-F14855FF269C}
+		{BDD08F71-475C-4C29-80E9-C96DA7DBEFAB} = {0A095455-FC56-464E-B01F-E8DC50696802}
+		{771782BF-835B-4D6F-A163-99AB82A9C511} = {C02E3E4F-6F5C-4F92-A4FA-F14855FF269C}
+		{381008C6-E83C-4898-8F14-43985CBF49BF} = {C02E3E4F-6F5C-4F92-A4FA-F14855FF269C}
+		{DFD232E0-BEF9-4ED0-8B57-651F9DD06A0F} = {5A6458C4-B1FE-447A-B2F4-F94A302BA743}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 9
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dxonline-cia.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Tinct.Net.Communication\\Tinct.Net.Communication.csproj
+		SccProjectTopLevelParentUniqueName1 = Tinct.sln
+		SccProjectName1 = Tinct.Net.Communication
+		SccLocalPath1 = Tinct.Net.Communication
+		SccProjectUniqueName2 = Tinct.Net.Message\\Tinct.Net.Message.csproj
+		SccProjectTopLevelParentUniqueName2 = Tinct.sln
+		SccProjectName2 = Tinct.Net.Message
+		SccLocalPath2 = Tinct.Net.Message
+		SccProjectUniqueName3 = Tinct.PlatformInvoke\\Tinct.PlatformController.csproj
+		SccProjectTopLevelParentUniqueName3 = Tinct.sln
+		SccProjectName3 = Tinct.PlatformInvoke
+		SccLocalPath3 = Tinct.PlatformInvoke
+		SccProjectUniqueName4 = Tinct.Net.SlavePointTest\\Tinct.Net.SlavePointConsole.csproj
+		SccProjectTopLevelParentUniqueName4 = Tinct.sln
+		SccProjectName4 = Tinct.Net.SlavePointTest
+		SccLocalPath4 = Tinct.Net.SlavePointTest
+		SccProjectUniqueName5 = Tinct.Net.MasterPoint\\Tinct.Net.MasterPointConsole.csproj
+		SccProjectTopLevelParentUniqueName5 = Tinct.sln
+		SccProjectName5 = Tinct.Net.MasterPoint
+		SccLocalPath5 = Tinct.Net.MasterPoint
+		SccProjectUniqueName6 = Tinct.MasterPointController\\Tinct.TinctTaskMangement.csproj
+		SccProjectTopLevelParentUniqueName6 = Tinct.sln
+		SccProjectName6 = Tinct.MasterPointController
+		SccLocalPath6 = Tinct.MasterPointController
+		SccProjectUniqueName7 = Tinct.Net.MessageDispath\\Tinct.Net.MessageDispath.csproj
+		SccProjectTopLevelParentUniqueName7 = Tinct.sln
+		SccProjectName7 = Tinct.Net.MessageDispath
+		SccLocalPath7 = Tinct.Net.MessageDispath
+		SccProjectUniqueName8 = Tinct.Common\\Tinct.Common.csproj
+		SccProjectTopLevelParentUniqueName8 = Tinct.sln
+		SccProjectName8 = Tinct.Common
+		SccLocalPath8 = Tinct.Common
+	EndGlobalSection
+EndGlobal
