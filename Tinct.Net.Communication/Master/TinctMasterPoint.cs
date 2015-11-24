@@ -16,6 +16,8 @@ namespace Tinct.Net.Communication.Master
     {
         private object syncMachineInfoObject = new object();
 
+        private int masterPort = int.Parse(ConfigurationManager.AppSettings["MasterPort"]);
+
         private List<MachineInfo> machineInfolist = new List<MachineInfo>();
 
         public List<MachineInfo> MachineInfolist
@@ -43,38 +45,9 @@ namespace Tinct.Net.Communication.Master
 
         public void UpdateMachineInfo(string message)
         {
-            lock (syncMachineInfoObject)
-            {
-                MachineInfo machineInfo = MachineInfo.GetObjectBySerializeString(message);
-                int count = machineInfolist.Count;
-                bool searchmac = false;
-                for (int i = 0; i < count; i++)
-                {
-                    if (machineInfolist[i].MachineName == machineInfo.MachineName)
-                    {
-                        searchmac = true;
-                        machineInfolist[i].MachineInvokeInfos = machineInfo.MachineInvokeInfos;
-                        int mivcount = machineInfo.MachineInvokeInfos.Count;
-                        for (int j = 0; j < mivcount; j++)
-                        {
-                            ///TO DO....
-                            if (machineInfo.MachineInvokeInfos[j].Status == MachineInvokeStatus.Completed)
-                            {
-                                string logmessage = machineInfo.MachineName + " " + machineInfo.MachineInvokeInfos[j].TaskID + " " + machineInfo.MachineInvokeInfos[j].ActionName + " " +
-                                    machineInfo.MachineInvokeInfos[j].ControllerName + " " + machineInfo.MachineInvokeInfos[j].Status+"\r\n";
-                                File.AppendAllText(Environment.CurrentDirectory + @"\\Task.txt", logmessage);
-                            }
-                        }
 
-                    }
-
-                }
-                if (!searchmac)
-                {
-                    machineInfolist.Add(machineInfo);
-                }
-
-            }
+            MachineInfo machineInfo = MachineInfo.GetObjectBySerializeString(message);
+            UpdateMachineInfo(machineInfo);
         }
 
         public void UpdateMachineInfo(MachineInfo machineInfo)
@@ -114,7 +87,6 @@ namespace Tinct.Net.Communication.Master
             }
 
         }
-
 
         public string GetAvaiableMachineName(string controllerName, string actionName)
         {
@@ -159,55 +131,17 @@ namespace Tinct.Net.Communication.Master
 
         }
 
-        /// <summary>
-        /// check slavemaches by namelist ,start master point
-        /// </summary>
-        /// <param name="slavenames">salve name list</param>
-        /// <returns></returns>
-        public override bool StartMaster(IList<string> slavenames)
+
+        public override void StartMaster()
         {
+            tinctCon.StartMasterServer(masterPort);
 
-            MachineInfolist.Clear();
-            int port = int.Parse(ConfigurationManager.AppSettings["SlavePort"].ToString());
-
-            foreach (var slavename in slavenames)
+            Timer t = new Timer((obj) => 
             {
-                if (tinctCon.Connect(slavename, port))
-                {
-                    MachineInfo mac = new MachineInfo();
-                    mac.MachineName = slavename;
 
-                    MachineInfolist.Add(mac);
-
-                    Console.WriteLine("Connect {0} successful", slavename);
-                }
-                else
-                {
-                    MachineInfo mac = new MachineInfo();
-                    mac.MachineName = slavename;
-                    MachineInfolist.Add(mac);
-
-                    Console.WriteLine("Connect {0} failed", slavename);
-                }
-            }
-            if (MachineInfolist.Count > 0)
-            {
-                int masterport = 0;
-                int.TryParse(ConfigurationManager.AppSettings["Port"], out masterport);
-                if (masterport == 0)
-                {
-                    return false;
-                }
-                Thread t = new Thread(() => { tinctCon.StartMasterServer(masterport); });
-                t.Start();
+            },);
 
 
-                return true;
-            }
-            else
-            {
-                return false;
-            }
         }
 
         public override void EndMaster()
