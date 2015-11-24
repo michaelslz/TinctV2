@@ -15,42 +15,17 @@ namespace Tinct.Net.Communication.Master
     {
         public ITinctConnect tinctCon = null;
 
-        public virtual bool StartMaster(IList<string> slavenames)
-        {
-            tinctCon = new TinctConnect();
-            int port = int.Parse(ConfigurationManager.AppSettings["SlavePort"].ToString());
-
-            foreach(var slavename in slavenames)
-            {
-                if (tinctCon.Connect(slavename, port))
-                {
-                  
-                    Console.WriteLine("Connect {0} successful",slavename);
-                    return true;
-                }
-                else 
-                {
-                    Console.WriteLine("Connect {0} failed", slavename);
-                }
-            }
-          
-
-
-
-
-
-
-            return false;
-        }
-
-        
-
         public virtual void EndMaster()
         {
           
         }
 
-       
 
+
+
+        public virtual void StartMaster()
+        {
+            
+        }
     }
 }
